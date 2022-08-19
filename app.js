@@ -77,7 +77,9 @@ app.post("/failure", function(req, res){
 });
 
 //setup server to listen in certain port
-app.listen(3000, function(){
+//process.env.PORT => is a dynamic port that server Horoku decide
+// app.listen(process.env.PORT, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log("Server is running in port 3000");
 });
 
